@@ -10,6 +10,8 @@ const init = () => {
   uselessFactDiv = document.querySelector('#uselessContent');
   catFactDiv = document.querySelector('#catContent');
   pokemonFactDiv = document.querySelector('#pokemonContent');
+
+  setUselessFact();
 };
 
 const setUselessFact = async () => {
