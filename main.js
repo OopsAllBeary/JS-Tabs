@@ -23,12 +23,12 @@ const setUselessFact = async () => {
 
 const setCatFact = async () => {
     const newCatFact = await fetchAPI(catFactsAPIEndpoint);
-    console.log(newCatFact);
+    catFactDiv.innerHTML = '<p>' + newCatFact.fact + '</p>';
 }
 
 const setPokemonFact = async () => {
     const newPokemonFact = await fetchAPI(pokemonFactsAPIEndpoint);
-    console.log(newPokemonFact);
+    pokemonFactDiv.innerHTML = '<p>' + newPokemonFact.data[0] + '</p>';
 }
 
 const fetchAPI = async (endpoint) => {
