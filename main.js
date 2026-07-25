@@ -11,9 +11,9 @@ const init = () => {
   console.log(catFactDiv);
   console.log(pokemonFactDiv);
 
-  console.log(fetchAPI(uselessAPIEndpoint));
-  console.log(fetchAPI(catFactsAPIEndpoint));
-  console.log(fetchAPI(pokemonFactsAPIEndpoint));
+  console.log(await fetchAPI(uselessAPIEndpoint));
+  console.log(await fetchAPI(catFactsAPIEndpoint));
+  console.log(await fetchAPI(pokemonFactsAPIEndpoint));
 };
 
 const fetchAPI = async (endpoint) => {
