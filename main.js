@@ -17,7 +17,7 @@ const init = () => {
 const setUselessFact = async () => {
     const newFact = await fetchAPI(uselessAPIEndpoint);
     console.log(newFact);
-    // uselessFactDiv.innerHTML
+    uselessFactDiv.innerHTML = '<p>' + newFact.text + '</p>';
 }
 
 const fetchAPI = async (endpoint) => {
