@@ -2,7 +2,9 @@ const uselessAPIEndpoint = 'https://uselessfacts.jsph.pl/api/v2/facts/random';
 const catFactsAPIEndpoint = 'https://catfact.ninja/fact';
 const pokemonFactsAPIEndpoint = 'https://pokefacts.vercel.app/';
 
-const uselessFactDiv, catFactDiv, pokemonFactDiv;
+var uselessFactDiv;
+var catFactDiv;
+var pokemonFactDiv;
 
 const init = () => {
   uselessFactDiv = document.querySelector('#uselessContent');
