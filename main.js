@@ -12,6 +12,8 @@ const init = () => {
   pokemonFactDiv = document.querySelector('#pokemonContent');
 
   setUselessFact();
+  setCatFact();
+  setPokemonFact();
 };
 
 const setUselessFact = async () => {
