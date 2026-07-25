@@ -2,19 +2,19 @@ const uselessAPIEndpoint = 'https://uselessfacts.jsph.pl/api/v2/facts/random';
 const catFactsAPIEndpoint = 'https://catfact.ninja/fact';
 const pokemonFactsAPIEndpoint = 'https://pokefacts.vercel.app/';
 
+const uselessFactDiv, catFactDiv, pokemonFactDiv;
+
 const init = () => {
-  const uselessFactDiv = document.querySelector('#uselessContent');
-  const catFactDiv = document.querySelector('#catContent');
-  const pokemonFactDiv = document.querySelector('#pokemonContent');
-
-  console.log(uselessFactDiv);
-  console.log(catFactDiv);
-  console.log(pokemonFactDiv);
-
-  console.log(await fetchAPI(uselessAPIEndpoint));
-  console.log(await fetchAPI(catFactsAPIEndpoint));
-  console.log(await fetchAPI(pokemonFactsAPIEndpoint));
+  uselessFactDiv = document.querySelector('#uselessContent');
+  catFactDiv = document.querySelector('#catContent');
+  pokemonFactDiv = document.querySelector('#pokemonContent');
 };
+
+const setUselessFact = async () => {
+    const newFact = await fetchAPI(uselessAPIEndpoint);
+    console.log(newFact);
+    // uselessFactDiv.innerHTML
+}
 
 const fetchAPI = async (endpoint) => {
   try {
