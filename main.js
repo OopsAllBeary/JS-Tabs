@@ -15,9 +15,18 @@ const init = () => {
 };
 
 const setUselessFact = async () => {
-    const newFact = await fetchAPI(uselessAPIEndpoint);
-    console.log(newFact);
-    uselessFactDiv.innerHTML = '<p>' + newFact.text + '</p>';
+    const newUselessFact = await fetchAPI(uselessAPIEndpoint);
+    uselessFactDiv.innerHTML = '<p>' + newUselessFact.text + '</p>';
+}
+
+const setCatFact = async () => {
+    const newCatFact = await fetchAPI(catFactsAPIEndpoint);
+    console.log(newCatFact);
+}
+
+const setPokemonFact = async () => {
+    const newPokemonFact = await fetchAPI(pokemonFactsAPIEndpoint);
+    console.log(newPokemonFact);
 }
 
 const fetchAPI = async (endpoint) => {
